@@ -4,23 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Homepage</title>
 </head>
-<body class="">
-    <section class="flex flex-col gap-16">
+<body class="ml-[135px] mr-[135px] mt-[64px]">
+    <section id="firstSection" class="flex flex-col gap-16">
         <div class="flex gap-3 items-center">
             <div class="bg-[#DB4444] w-5 h-10 rounded "></div><p class=" text-[#DB4444] font-poppins font-semibold text-base">Categories</p>
         </div>
         <h1 class="font-semibold text-4xl">Browse By Category</h1>
         <div class="flex gap-8">
-            <div class="w-44 h-36 border border-black"></div>
-            <div class="w-44 h-36 border border-black"></div>
-            <div class="w-44 h-36 border border-black"></div>
+            <a href="">
+                <div class="w-44 h-36 border border-grey flex justify-center items-center flex-col">
+                    <i class="fa-solid fa-microchip text-6xl"></i>
+                    <p>Tech</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="w-44 h-36 border border-grey flex justify-center items-center flex-col">
+                    <i class="fa-solid fa-shirt text-6xl"></i>
+                    <p>Fashion</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="w-44 h-36 border border-grey flex justify-center items-center flex-col">
+                    <i class="fa-solid fa-chair text-6xl"></i>
+                    <p>Furniture</p>
+                </div>
+            </a>
+        </div>
+        <hr>
+    </section>
+    <section id="secondSection" class="flex flex-col gap-16 mt-[64px]">
+        <div class="flex gap-3 items-center">
+            <div class="bg-[#DB4444] w-5 h-10 rounded "></div><p class=" text-[#DB4444] font-poppins font-semibold text-base">Our Products</p>
+        </div>
+        <h1 class="font-semibold text-4xl">Explore Our Products</h1>
+        <div id="container" class="grid grid-cols-4 grid-rows-2 gap-5">
+
         </div>
     </section>
-
-
-
+    
     <script src="./index.js"></script>
 </body>
 </html>
