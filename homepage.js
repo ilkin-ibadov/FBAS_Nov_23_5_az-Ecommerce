@@ -3,6 +3,7 @@ const showMoreButton = $("#showMore");
 const modal = $("#searchModal");
 const modalContainer = $("#modalContainer");
 const search = $('#search');
+const scrollToTopButton = $("#scrollToTop");
 
 $("#profileMenuToggle").click(function () {
     $("#profileMenu").toggle();
@@ -58,15 +59,18 @@ function getData(page = 1) {
         } else {
             showMoreButton.addClass("hidden");
         }
-    }).fail(function() {
-        alert('Veriler alınamadı.');
-    });
+    })
 }
 
 showMoreButton.on("click", function () {
     currentPage++;
     getData(currentPage);
+    scrollToTopButton.removeClass("hidden");
 });
+
+scrollToTopButton.on("click", function () {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+})
 
 getData(currentPage);
 
