@@ -49,6 +49,35 @@ function createProductItems(data) {
     });
 }
 
+// 
+const tech = $("#categoryTech");
+const fashion = $("#categoryFashion");
+const furniture = $("#categoryFurniture")
+
+tech.on("click", function () {
+    container.html("")
+    getCategoryData("tech")
+})
+
+fashion.on("click", function () {
+    container.html("")
+    getCategoryData("fashion")
+})
+
+furniture.on("click", function () {
+    container.html("")
+    getCategoryData("furniture")
+})
+
+function getCategoryData(category) {
+    $.get(`http://localhost:3000/api/products?category=${category}`, (response) => {
+        allProducts = response.products;
+        createProductItems(allProducts);
+    })
+    showMoreButton.addClass("hidden")
+}
+
+// 
 function getData(page = 1) {
     $.get(`http://localhost:3000/api/products?page=${page}&pageSize=${pageSize}`, (response) => {
         allProducts = response.products;
@@ -121,3 +150,4 @@ function getProductData(searchTerm) {
         createModalItems(response.products);
     });
 }
+

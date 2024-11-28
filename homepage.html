@@ -44,22 +44,22 @@
         <div class="ml-[135px] mr-[135px] mt-[64px]">
             <section id="firstSection" class="flex flex-col gap-16">
                 <div class="flex gap-3 items-center">
-                    <div class="bg-[#DB4444] w-5 h-10 rounded "></div>
+                    <div class="bg-[#DB4444] w-5 h-10 rounded"></div>
                     <p class=" text-[#DB4444] font-poppins font-semibold text-base">Categories</p>
                 </div>
                 <h1 class="font-semibold text-4xl">Browse By Category</h1>
                 <div class="flex gap-8">
-                        <div class="w-44 h-36 border border-grey flex justify-center items-center flex-col cursor-pointer">
+                        <div id="categoryTech" class="w-44 h-36 border border-grey flex justify-center items-center flex-col cursor-pointer">
                             <i class="fa-solid fa-microchip text-6xl"></i>
-                            <p>Tech</p>
+                            <p class="mt-4">Tech</p>
                         </div>
-                        <div class="w-44 h-36 border border-grey flex justify-center items-center flex-col cursor-pointer">
+                        <div id="categoryFashion" class="w-44 h-36 border border-grey flex justify-center items-center flex-col cursor-pointer">
                             <i class="fa-solid fa-shirt text-6xl"></i>
-                            <p>Fashion</p>
+                            <p class="mt-4">Fashion</p>
                         </div>
-                        <div class="w-44 h-36 border border-grey flex justify-center items-center flex-col cursor-pointer">
+                        <div id="categoryFurniture" class="w-44 h-36 border border-grey flex justify-center items-center flex-col cursor-pointer">
                             <i class="fa-solid fa-chair text-6xl"></i>
-                            <p>Furniture</p>
+                            <p class="mt-4">Furniture</p>
                         </div>
                 </div>
                 <hr>
@@ -72,10 +72,9 @@
                 </div>
                 <h1 class="font-semibold text-4xl">Explore Our Products</h1>
                 <!-- Modal -->
-                <div id="searchModal"
-                    class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex justify-center items-center">
+                <div id="searchModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex justify-center items-center">
                     <div class="bg-white w-[80%] h-[80%] rounded-lg p-6 overflow-auto">
-                        <button id="closeModal" class="absolute top-4 right-4 text-black text-2xl">&times;</button>
+                        <button id="closeModal" class="text-black text-3xl absolute ml-[75%]">&times;</button>
                         <h2 class="text-2xl font-bold mb-4">Search Results</h2>
                         <div id="modalContainer" class="grid grid-cols-4 gap-5"></div>
                     </div>
