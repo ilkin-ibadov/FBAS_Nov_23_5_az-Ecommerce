@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="h-screen flex flex-col ">
+        <!--tural-->
+        <div class="ml-[135px] mr-[135px] mt-[64px]">
+            <section id="firstSection" class="flex flex-col gap-16">
+                <div class="flex gap-3 items-center">
+                    <div class="bg-[#DB4444] w-5 h-10 rounded "></div>
+                    <p class=" text-[#DB4444] font-poppins font-semibold text-base">Categories</p>
+                </div>
+                <h1 class="font-semibold text-4xl">Browse By Category</h1>
+                <div class="flex gap-8">
+                        <div class="w-44 h-36 border border-grey flex justify-center items-center flex-col cursor-pointer">
+                            <i class="fa-solid fa-microchip text-6xl"></i>
+                            <p>Tech</p>
+                        </div>
+                        <div class="w-44 h-36 border border-grey flex justify-center items-center flex-col cursor-pointer">
+                            <i class="fa-solid fa-shirt text-6xl"></i>
+                            <p>Fashion</p>
+                        </div>
+                        <div class="w-44 h-36 border border-grey flex justify-center items-center flex-col cursor-pointer">
+                            <i class="fa-solid fa-chair text-6xl"></i>
+                            <p>Furniture</p>
+                        </div>
+                </div>
+                <hr>
+            </section>
+
+            <section id="secondSection" class="flex flex-col gap-16 mt-[64px]">
+                <div class="flex gap-3 items-center">
+                    <div class="bg-[#DB4444] w-5 h-10 rounded "></div>
+                    <p class=" text-[#DB4444] font-poppins font-semibold text-base">Our Products</p>
+                </div>
+                <h1 class="font-semibold text-4xl">Explore Our Products</h1>
+                <!-- Modal -->
+                <div id="searchModal"
+                    class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex justify-center items-center">
+                    <div class="bg-white w-[80%] h-[80%] rounded-lg p-6 overflow-auto">
+                        <button id="closeModal" class="absolute top-4 right-4 text-black text-2xl">&times;</button>
+                        <h2 class="text-2xl font-bold mb-4">Search Results</h2>
+                        <div id="modalContainer" class="grid grid-cols-4 gap-5"></div>
+                    </div>
+                </div>
+                <div id="container" class="grid grid-cols-4 grid-rows-2 gap-5 "></div>
+                <button id="showMore" class="hidden mt-4 px-4 py-2 bg-[#DB4444] text-white font-semibold rounded mx-auto">
+                    Show More
+                </button>
+            </section>
+            
+        </div>
+    </div>
+    <script src="homepage.js"></script>
+</body>
+</html>
