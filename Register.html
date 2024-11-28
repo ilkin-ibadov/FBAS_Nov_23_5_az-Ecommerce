@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <title>Register</title>
+</head>
+<body>
+        <div id="login-form" class="w-full h-screen flex items-center gap-[130px] max-width-[1440px] mx-auto ">
+                <img src="images/Login.png" alt="" class="w-[805px] h-[781px]">
+                <div id="register-form" class="w-[370px]  flex flex-col gap-[40px] ">
+                    <h1 class="text-4xl">Create an account</h1>
+                    <h1 class="text-base">Enter your details below</h1>
+
+                    <input type="text" id="name" name="" placeholder="First Name" class="h-[32px] focus:outline-none focus:border-t-0 focus:border-r-0 focus:border-l-0 border-b-[1px]">
+                    <input type="text" id="surname" name="" placeholder="Last Name" class="h-[32px] focus:outline-none focus:border-t-0 focus:border-r-0 focus:border-l-0 border-b-[1px]">
+                    <input type="email" id="email" name="" placeholder="Email" class="h-[32px] focus:outline-none focus:border-t-0 focus:border-r-0 focus:border-l-0 border-b-[1px]">
+                    <input type="password" id="password" name="" placeholder="Password" class="h-[32px] focus:outline-none focus:border-t-0 focus:border-r-0 focus:border-l-0 border-b-[1px]">
+                    <div id="error-message" class="text-xl"></div>
+                    <button type="submit" class="py-[15px] bg-[#DB4444] rounded text-white">Create Account</button>
+                    <pre class="text-gray-400">Allready have account?  <a href="Login.html" class="text-black">Log in</a></pre>
+                    
+                </div>
+        </div>
+        <script src="./Regsiter.js"></script>
+</body>
+</html>
