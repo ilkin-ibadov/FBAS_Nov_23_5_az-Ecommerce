@@ -9,81 +9,101 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
-
 <body>
-    <div class="h-[2661px] flex flex-col ">
+    <div class="h-screen flex flex-col ">
         <!-- Navbar -->
         <section>
-            <div class="flex justify-between items-center  mt-[30px] px-6 py-4">
-                <h1 class="text-2xl font-semibold pl-[135px]">Exclusive</h1>
+            <div class="flex justify-between items-center  mt-[30px]  py-4">
+                <h1 class="text-4xl font-semibold pl-[135px]">Exclusive</h1>
                 <div class="flex items-center space-x-4">
                     <input id="search" type="text" placeholder="What are you looking for? "
-                    class=" w-64 border px-6 py-2 rounded-lg focus:outline-none bg-gray-100">
-                    <button class="text-gray-600 absolute right-[19%] "> <!--1440w ucun 30% -->
+                        class=" w-64 border px-6 py-2 rounded-lg focus:outline-none bg-gray-100">
+                    <button id="search-btn" class="text-gray-600 absolute right-[11.5%] "> <!--1440w ucun 30% -->
                         <i class="fa-solid fa-magnifying-glass fa-lg"></i>
                     </button>
                     <button class="text-gray-600 ">
-                        <i class="fa-solid fa-basket-shopping fa-lg"></i>
+                        <a href="#" id="shopping"><i class="fa-solid fa-basket-shopping fa-lg"></i></a>
                     </button>
                     <div class="relative">
                         <button id="profileMenuToggle" class="text-gray-600 pr-[135px]">
                             <i class="fa-solid fa-user fa-lg"></i>
                         </button>
                         <div id="profileMenu"
-                        class="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg hidden">
+                            class="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg hidden">
                             <a href="#" id="manageAccount"
                                 class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Manage My
                                 Account</a>
-                                <a href="#" id="logout" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Logout</a>
-                            </div>
+                            <a href="#" id="logout" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Logout</a>
                         </div>
+                    </div>
                 </div>
             </div>
+            <hr class="border-t-1 border-gray-400 my-[15px]">
         </section>
-        <!--tural-->
-        <hr class="border-t-1 border-gray-400 my-[15px]">
-    
-        <div class="flex items-center justify-between px-[249px] mx-[88px] pt-[1699px] ">
-            <img src="Services.png" alt="">
-            <img src="Services(1).png" alt="">
-            <img src="Services(2).png" alt="">
+        <!-- Tural -->
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center py-[156px] ">
+            <div>
+                <div class="flex justify-center pl-[333px]">
+                    <img src="Services.png" alt="">
+                </div>
+                <h3 class="font-bold text-lg mt-4 pl-[333px]">FREE AND FAST DELIVERY</h3>
+                <p class="text-gray-500 pl-[333px]">Free delivery for all orders over $140</p>
+            </div>
+
+            <div>
+                <div class="flex justify-center">
+                    <img src="Services(1).png" alt="">
+                </div>
+                <h3 class="font-bold text-lg mt-4">24/7 CUSTOMER SERVICE</h3>
+                <p class="text-gray-500">Friendly 24/7 customer support</p>
+            </div>
+
+            <div>
+                <div class="flex justify-center pr-[333px]">
+                    <img src="Services(2).png" alt="">
+                </div>
+                <h3 class="font-bold text-lg mt-4 pr-[333px]">MONEY BACK GUARANTEE</h3>
+                <p class="text-gray-500 pr-[333px]">We return money within 30 days</p>
+            </div>
         </div>
+
+        <!-- Footer -->
         <section>
-            <!-- Footer -->
             <div class="h-[440px] bg-[#000000] text-white py-6  flex flex-col justify-end mt-auto  ">
-                <div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 pb-[70px]">
-                    <div>
-                        <h3 class="text-xl font-bold mb-4">Exclusive</h3>
-                        <h3 class="text-lg mb-4">Subscribe</h3>
-                        <p class="mb-4">Get 10% off your first order</p>
-                        <img src="Send_Mail.png" alt="">
+                <div class="container mx-[135px] grid grid-cols-1 md:grid-cols-5 gap-8 ">
+                    <div class="">
+                        <h3 class="text-2xl font-bold mt-[80px]">Exclusive</h3>
+                        <h3 class="text-lg mt-[24px]">Subscribe</h3>
+                        <p class="mt-[24px]">Get 10% off your first order</p>
+                        <img class="mt-[16px]" class="" src="Send_Mail.png" alt="">
                     </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-4">Support</h3>
-                        <p class="pt-[5px]">111 Bijoy sarani, Dhaka,</p>
+                    <div class="pl-[50px]">
+                        <h3 class="text-2xl font-bold mt-[80px]">Support</h3>
+                        <p class="mt-[24px]">111 Bijoy sarani, Dhaka,</p>
                         <p>DH 1515, Bangladesh.</p>
-                        <p class="pt-[15px]">exclusive@gmail.com</p>
-                        <p class="pt-[15px]">+88015-88888-9999</p>
+                        <p class="mt-[16px]">exclusive@gmail.com</p>
+                        <p class="mt-[16px]">+88015-88888-9999</p>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-4">Account</h3>
-                        <a href="#" class="block pt-[15px] hover:text-gray-500">My Account</a>
-                        <a href="#" class="block pt-[15px] hover:text-gray-500">Login / Register</a>
-                        <a href="#" class="block pt-[15px] hover:text-gray-500">Basket</a>
+                    <div class="pl-[50px]">
+                        <h3 class="text-2xl font-bold mt-[80px]">Account</h3>
+                        <a href="#" class="block mt-[24px] hover:text-gray-500">My Account</a>
+                        <a href="#" class="block mt-[16px] hover:text-gray-500">Login / Register</a>
+                        <a href="#" class="block mt-[16px] hover:text-gray-500">Basket</a>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-4">Quick Link</h3>
-                        <p class="pt-[15px] text-base">Privacy Policy</p>
-                        <p class="pt-[15px]">Terms Of Use</p>
+                    <div class="pl-[50px]">
+                        <h3 class="text-2xl font-bold mt-[80px]">Quick Link</h3>
+                        <p class="mt-[24px] text-base">Privacy Policy</p>
+                        <p class="mt-[16px]">Terms Of Use</p>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-4">Download App</h3>
-                        <p class="opacity-45">Save $3 with App New User Only</p>
+                    <div class="pl-[50px]">
+                        <h3 class="text-2xl font-bold mt-[80px]">Download App</h3>
+                        <p class="opacity-45 mt-[24px]">Save $3 with App New User Only</p>
                         <div class="flex items-center space-x-2 my-2">
-                            <img src="Qr_Code.png" alt="Google Play QR" class="w-[100px]">
-                            <img src="Frame718.png" alt="App Store QR" class="w-[100px]">
+                            <img src="Qr_Code.png" alt="Google Play QR" class="w-[100px] mt-[8px]">
+                            <img src="Frame718.png" alt="App Store QR" class="w-[100px] mt-[8px]">
                         </div>
-                        <div class="flex space-x-4">
+                        <div class="flex space-x-4 mt-[24px]">
                             <a href="#" class="hover:text-gray-500 pt-[15px]  "><i
                                     class="fa-brands fa-facebook-f fa-2xl"></i></a>
                             <a href="#" class="hover:text-gray-500 pl-[10px] pt-[15px]"><i
@@ -100,11 +120,9 @@
                     <p>© Copyright Rimel 2022. All right reserved</p>
                 </div>
             </div>
+        </section>
 
-        </div>
-    </section>
-
-    <script src="1.js"></script>
+    </div>
+    <script src="homepage.js"></script>
 </body>
-
 </html>
