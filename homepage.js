@@ -1,52 +1,44 @@
-const container = $("#container");
-const showMoreButton = $("#showMore");
-
-let allProducts = [];
-let visibleProducts = 8;
-
-function createProductItems(data) {
+$("#profileMenuToggle").click(function () {
+    $("#profileMenu").toggle();
+  });
+  
+  $("#manageAccount").click(function () {
+    window.location.href = "manage_my_account.html";
+  });
+  
+  $("#logout").click(function () {
+    alert("Logout clicked");
+  });
+  
+  $(document).click(function (e) {
+    if (!$(e.target).closest("#profileMenu, #profileMenuToggle").length) {
+      $("#profileMenu").hide();
+    }
+  });
+  var container=$(`#container`)
+  var search=$(`#search`)
+  search.on("input",function(e){
     container.html("");
-    const productsToShow = data.slice(0, visibleProducts);
-
-    productsToShow.forEach((item) => {
-        const productItem = `
-            <div class="flex flex-col relative group">
-                <div class="relative">
-                    <img class="w-[270px] h-[250px] object-scale-down border p-4 bg-[#F5F5F5] product-image" src="${item.gallery[0]}" alt="${item.title}">
-                    <button class="add-to-basket absolute bottom-0 left-0 w-[270px] px-6 py-2 bg-black text-white rounded-none opacity-0 z-10 group-hover:opacity-100 transition-opacity duration-300">
-                        Add To Basket
-                    </button>
-                </div>
-                <p class="mt-[18px]">${item.title}</p>
-                <p class="mt-[18px] text-[#DB4444]">${item.currency}${item.price}</p>
-            </div>
-        `;
-        container.append(productItem);
-    });
-
-    if (data.length > visibleProducts) {
-        showMoreButton.removeClass("hidden");
+    var inputValue=e.target.value
+    if(inputValue){
+        getProductData(inputValue)
     }
-}
 
-function getData() {
-    $.get("http://localhost:3000/api/products", (response) => {
-        allProducts = response.products;
-        createProductItems(allProducts);
-    });
-}
-
-showMoreButton.on("click", function () {
-    if (visibleProducts === 8) {
-        visibleProducts = allProducts.length;
-        showMoreButton.text("Show Less");
-    } else {
-        visibleProducts = 8;
-        showMoreButton.text("Show More");
-    }
-    createProductItems(allProducts);
-});
-
-getData();
-
-
+  })
+  function createProductItems(data){
+    $.each(data,function(index,item){
+        var productItem=`
+        <div>
+            <h2>${item.name}</h2>
+            <img src="${item.gallery[0]}" alt="${item.name}" />
+            <p>${item.description}</p>
+        </div>
+    `
+    container.append(productItem)
+    })
+  }
+  function getProductData(searchTerm){
+    $.get("http://localhost:3000/api/products",{searchTerm:searchTerm},function(response){
+        createProductItems(response.products)
+    })
+  }
